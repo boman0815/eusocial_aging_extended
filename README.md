@@ -85,3 +85,12 @@ dos2unix my_file
 ```
 
 Where ``my_file` can be `run`, `build` or whatever.
+
+## Renaming files
+
+Executable scripts with a `.txt` extension would be considered misleading on GNU/Linux.
+Here a one-liner to rename all these.
+
+```
+mv build.txt build; mv run.txt run; mv run_one.txt run_one
+```
