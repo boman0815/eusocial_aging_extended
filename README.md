@@ -23,18 +23,65 @@ module load intel
 
 # Compile with Intel compiler
 icc -o my_exe -std=c++11 colony.cpp corand.cpp simulation.cpp individual.cpp utils.cpp linalg.cpp random.cpp
-
-
-
-
-
-
-
-
-
-
-# Load GCC 5.1.0
-# module load GCC/5.1.0
-# Build the executable using GCC
-# g++ -o my_exe -std=c++11 colony.cpp corand.cpp simulation.cpp individual.cpp utils.cpp linalg.cpp random.cpp
 ```
+
+## `run`
+
+Just call this one:
+
+```
+#!/bin/bash
+# Run this script in the folder with the executable
+# Perhaps you first need to:
+#
+#    chmod +x run
+#
+# This allows execution of this script.
+# Then running it:
+#
+#    ./run
+#
+# This will put 20 (or so) jobs request in the queue
+
+for i in `seq 1 20`;
+do
+  sbatch run_one
+done
+```
+
+It will call `run_one`.
+
+## `run_one`
+
+```
+#!/bin/bash
+# Call this file using
+#
+#  sbatch run_one
+#
+# Do not do this as such, prefer
+# using the 'run' script:
+#
+# ./run
+#
+# This 'run' script will call this one for you :-)
+#
+
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1 
+#SBATCH --mem=10GB
+#SBATCH --job-name=run_one
+#SBATCH --output=run_one-%j.log
+./my_exe
+```
+
+## Troubleshooting
+
+File cannot be read, due to Windows line endings.
+
+```
+dos2unix my_file
+```
+
+Where ``my_file` can be `run`, `build` or whatever.
