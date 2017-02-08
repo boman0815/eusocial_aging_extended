@@ -78,6 +78,24 @@ It will call `run_one`.
 
 ## Troubleshooting
 
+### Making scripts execute
+
+To make `my_file` an executable scuipt: 
+```
+chmod +x my_file
+```
+
+Where ``my_file` can be `run`, `build` or whatever.
+
+Useful oneliner:
+
+```
+chmod +x run; chmod +x run_one; chmod +x build
+```
+
+
+### Windows line endings
+
 File cannot be read, due to Windows line endings.
 
 ```
@@ -92,8 +110,7 @@ Useful oneliner:
 dos2unix run; dos2unix run_one; dos2unix build
 ```
 
-
-## Renaming files
+### Renaming text files
 
 Executable scripts with a `.txt` extension would be considered misleading on GNU/Linux.
 Here a one-liner to rename all these.
