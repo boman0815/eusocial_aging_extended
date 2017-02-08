@@ -86,6 +86,13 @@ dos2unix my_file
 
 Where ``my_file` can be `run`, `build` or whatever.
 
+Useful oneliner:
+
+```
+dos2unix run; dos2unix run_one; dos2unix build
+```
+
+
 ## Renaming files
 
 Executable scripts with a `.txt` extension would be considered misleading on GNU/Linux.
