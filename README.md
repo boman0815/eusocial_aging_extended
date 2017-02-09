@@ -118,15 +118,15 @@ Here a one-liner to rename all these.
 ```
 mv build.txt build; mv run.txt run; mv run_one.txt run_one
 ```
-### preliminaries for the cluster
+### Preliminaries for the cluster
 
-error: 
+Error: 
 
 ./my_exe: /usr/lib64/libstdc++.so.6: version GLIBCXX_3.4.19' not found (required by ./my_exe).
 
 ./my_exe: /usr/lib64/libstdc++.so.6: version CXXABI_1.3.8' not found (required by ./my_exe).
 
-load module before running the executable.
+Load module before running the executable.
 
 ```
 module load GCC/5.1.0
