@@ -131,3 +131,8 @@ Load module before running the executable.
 ```
 module load GCC/5.1.0
 ```
+Check loaded modules
+
+```
+module list 
+```
