@@ -6,8 +6,8 @@
 ./script
 ```
 
-## build script
-
+## `build`
+compiling on the cluster (load gcc first)
 ```
 #!/bin/bash
 # Run this script in the folder with the source files.
@@ -140,4 +140,9 @@ Check loaded modules
 
 ```
 module list 
+```
+### Useful cluster commands
+see your que
+```
+squeue -u $USER
 ```
