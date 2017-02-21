@@ -146,3 +146,7 @@ see your que
 ```
 squeue -u $USER
 ```
+se the status of your jobs online
+```
+https://app.webhosting.rug.nl/peregrine/#jobs
+```
