@@ -1,6 +1,11 @@
 # eusocial_aging_extended
  version for simulation runs
 
+## run script
+```
+./script
+```
+
 ## build script
 
 ```
