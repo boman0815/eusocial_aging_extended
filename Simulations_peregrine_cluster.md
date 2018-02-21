@@ -146,7 +146,11 @@ see your que
 ```
 squeue -u $USER
 ```
-se the status of your jobs online
+see the status of your jobs online
 ```
 https://app.webhosting.rug.nl/peregrine/#jobs
+```
+cancel jobs (partition not needed)
+```
+scancel --state=PENDING (RUNNING) --user=bob --partition=short
 ```
