@@ -154,3 +154,11 @@ cancel jobs (partition not needed)
 ```
 scancel --state=PENDING (RUNNING) --user=bob --partition=short
 ```
+
+### For the DS model use
+
+module load foss/2020a
+g++ -std=c++2a -O2 main.cpp -o myexe
+
+
+
